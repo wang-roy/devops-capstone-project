@@ -15,108 +15,31 @@
 [clone : clone] + test -z 
 [clone : clone] + git config --global --add safe.directory /workspace/output
 [clone : clone] + /ko-app/git-init -url=https://github.com/wang-roy/devops-capstone-project.git -revision=main -refspec= -path=/workspace/output/ -sslVerify=true -submodules=true -depth=1 -sparseCheckoutDirectories=
-[clone : clone] {"level":"error","ts":1782504537.350527,"caller":"git/git.go:53","msg":"Error running git [remote get-url origin]: exit status 2\nerror: No such remote 'origin'\n","stacktrace":"github.com/tektoncd-catalog/git-clone/git-init/git.run\n\tgithub.com/tektoncd-catalog/git-clone/git-init/git/git.go:53\ngithub.com/tektoncd-catalog/git-clone/git-init/git.Fetch\n\tgithub.com/tektoncd-catalog/git-clone/git-init/git/git.go:109\nmain.main\n\tgithub.com/tektoncd-catalog/git-clone/git-init/main.go:52\nruntime.main\n\truntime/proc.go:272"}
-[clone : clone] {"level":"info","ts":1782504550.190823,"caller":"git/git.go:186","msg":"Successfully cloned https://github.com/wang-roy/devops-capstone-project.git @ 0741bae20934ef36bfb807a1376ec8fb6f3d2254 (grafted, HEAD, origin/main) in path /workspace/output/"}
-[clone : clone] {"level":"info","ts":1782504550.875131,"caller":"git/git.go:225","msg":"Successfully initialized and updated submodules in path /workspace/output/"}
+[clone : clone] {"level":"error","ts":1782515107.8953676,"caller":"git/git.go:53","msg":"Error running git [remote get-url origin]: exit status 2\nerror: No such remote 'origin'\n","stacktrace":"github.com/tektoncd-catalog/git-clone/git-init/git.run\n\tgithub.com/tektoncd-catalog/git-clone/git-init/git/git.go:53\ngithub.com/tektoncd-catalog/git-clone/git-init/git.Fetch\n\tgithub.com/tektoncd-catalog/git-clone/git-init/git/git.go:109\nmain.main\n\tgithub.com/tektoncd-catalog/git-clone/git-init/main.go:52\nruntime.main\n\truntime/proc.go:272"}
+[clone : clone] {"level":"info","ts":1782515120.9635925,"caller":"git/git.go:186","msg":"Successfully cloned https://github.com/wang-roy/devops-capstone-project.git @ 9d5bcccb26253986f18e9fe2caef53f44b0fcdb6 (grafted, HEAD, origin/main) in path /workspace/output/"}
+[clone : clone] {"level":"info","ts":1782515121.6442556,"caller":"git/git.go:225","msg":"Successfully initialized and updated submodules in path /workspace/output/"}
 [clone : clone] + cd /workspace/output/
 [clone : clone] + git rev-parse HEAD
-[clone : clone] + RESULT_SHA=0741bae20934ef36bfb807a1376ec8fb6f3d2254
+[clone : clone] + RESULT_SHA=9d5bcccb26253986f18e9fe2caef53f44b0fcdb6
 [clone : clone] + EXIT_CODE=0
 [clone : clone] + [ 0 != 0 ]
 [clone : clone] + git log -1 --pretty=%ct
-[clone : clone] + RESULT_COMMITTER_DATE=1782498001
-[clone : clone] + printf %s 1782498001
-[clone : clone] + printf %s 0741bae20934ef36bfb807a1376ec8fb6f3d2254
+[clone : clone] + RESULT_COMMITTER_DATE=1782512703
+[clone : clone] + printf %s 1782512703
+[clone : clone] + printf %s 9d5bcccb26253986f18e9fe2caef53f44b0fcdb6
 [clone : clone] + printf %s https://github.com/wang-roy/devops-capstone-project.git
+
+[tests : nosetests] /tekton/scripts/script-0-m5ssv: line 8: unexpected EOF while looking for matching `"'
 
 [lint : flake8] Collecting Werkzeug==2.1.2
 [lint : flake8]   Downloading Werkzeug-2.1.2-py3-none-any.whl (224 kB)
-[lint : flake8] Collecting SQLAlchemy==1.4.46
-[lint : flake8]   Downloading SQLAlchemy-1.4.46.tar.gz (8.5 MB)
-[lint : flake8] Collecting Flask==2.1.2
-[lint : flake8]   Downloading Flask-2.1.2-py3-none-any.whl (95 kB)
-[lint : flake8] Collecting Flask-SQLAlchemy==2.5.1
-[lint : flake8]   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
-[lint : flake8] Collecting Flask-Talisman==1.1.0
-[lint : flake8]   Downloading flask_talisman-1.1.0-py2.py3-none-any.whl (18 kB)
-[lint : flake8] Collecting Flask-Cors==6.0.5
-[lint : flake8]   Downloading flask_cors-6.0.5-py3-none-any.whl (16 kB)
-[lint : flake8] Collecting psycopg2-binary==2.9.3
-[lint : flake8]   Downloading psycopg2-binary-2.9.3.tar.gz (380 kB)
-[lint : flake8]     ERROR: Command errored out with exit status 1:
-[lint : flake8]      command: /usr/local/bin/python -c 'import io, os, sys, setuptools, tokenize; sys.argv[0] = '"'"'/tmp/pip-install-mi_njypr/psycopg2-binary_be8780566f984448831908e23d755f15/setup.py'"'"'; __file__='"'"'/tmp/pip-install-mi_njypr/psycopg2-binary_be8780566f984448831908e23d755f15/setup.py'"'"';f = getattr(tokenize, '"'"'open'"'"', open)(__file__) if os.path.exists(__file__) else io.StringIO('"'"'from setuptools import setup; setup()'"'"');code = f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' egg_info --egg-base /tmp/pip-pip-egg-info-u40ajbk0
-[lint : flake8]          cwd: /tmp/pip-install-mi_njypr/psycopg2-binary_be8780566f984448831908e23d755f15/
-[lint : flake8]     Complete output (23 lines):
-[lint : flake8]     running egg_info
-[lint : flake8]     creating /tmp/pip-pip-egg-info-u40ajbk0/psycopg2_binary.egg-info
-[lint : flake8]     writing /tmp/pip-pip-egg-info-u40ajbk0/psycopg2_binary.egg-info/PKG-INFO
-[lint : flake8]     writing dependency_links to /tmp/pip-pip-egg-info-u40ajbk0/psycopg2_binary.egg-info/dependency_links.txt
-[lint : flake8]     writing top-level names to /tmp/pip-pip-egg-info-u40ajbk0/psycopg2_binary.egg-info/top_level.txt
-[lint : flake8]     writing manifest file '/tmp/pip-pip-egg-info-u40ajbk0/psycopg2_binary.egg-info/SOURCES.txt'
-[lint : flake8]     
-[lint : flake8]     Error: pg_config executable not found.
-[lint : flake8]     
-[lint : flake8]     pg_config is required to build psycopg2 from source.  Please add the directory
-[lint : flake8]     containing pg_config to the $PATH or specify the full executable path with the
-[lint : flake8]     option:
-[lint : flake8]     
-[lint : flake8]         python setup.py build_ext --pg-config /path/to/pg_config build ...
-[lint : flake8]     
-[lint : flake8]     or with the pg_config option in 'setup.cfg'.
-[lint : flake8]     
-[lint : flake8]     If you prefer to avoid building psycopg2 from source, please install the PyPI
-[lint : flake8]     'psycopg2-binary' package instead.
-[lint : flake8]     
-[lint : flake8]     For further information please check the 'doc/src/install.rst' file (also at
-[lint : flake8]     <https://www.psycopg.org/docs/install.html>).
-[lint : flake8]     
-[lint : flake8]     ----------------------------------------
-[lint : flake8] WARNING: Discarding https://files.pythonhosted.org/packages/d7/1c/8d042630c5ff3c3e6d93c992bd7ecf516d577803b96781c6caa649bbf6e5/psycopg2-binary-2.9.3.tar.gz#sha256=761df5313dc15da1502b21453642d7599d26be88bff659382f8f9747c7ebea4e (from https://pypi.org/simple/psycopg2-binary/) (requires-python:>=3.6). Command errored out with exit status 1: python setup.py egg_info Check the logs for full command output.
-[lint : flake8] ERROR: Could not find a version that satisfies the requirement psycopg2-binary==2.9.3 (from versions: 2.7.4, 2.7.5, 2.7.6, 2.7.6.1, 2.7.7, 2.8, 2.8.1, 2.8.2, 2.8.3, 2.8.4, 2.8.5, 2.8.6, 2.9, 2.9.1, 2.9.2, 2.9.3, 2.9.4, 2.9.5, 2.9.6, 2.9.7, 2.9.8, 2.9.9, 2.9.10, 2.9.11, 2.9.12)
-[lint : flake8] ERROR: No matching distribution found for psycopg2-binary==2.9.3
-[lint : flake8] WARNING: You are using pip version 21.1.1; however, version 26.0.1 is available.
-[lint : flake8] You should consider upgrading via the '/usr/local/bin/python -m pip install --upgrade pip' command.
-
-[init : remove] Removing all files from /workspace/source ...
-
-[clone : clone] + [ false = true ]
-[clone : clone] + [ false = true ]
-[clone : clone] + [ false = true ]
-[clone : clone] + CHECKOUT_DIR=/workspace/output/
-[clone : clone] + [ true = true ]
-[clone : clone] + cleandir
-[clone : clone] + [ -d /workspace/output/ ]
-[clone : clone] + rm -rf /workspace/output//*
-[clone : clone] + rm -rf /workspace/output//.[!.]*
-[clone : clone] + rm -rf /workspace/output//..?*
-[clone : clone] + test -z 
-[clone : clone] + test -z 
-[clone : clone] + test -z 
-[clone : clone] + git config --global --add safe.directory /workspace/output
-[clone : clone] + /ko-app/git-init -url=https://github.com/wang-roy/devops-capstone-project.git -revision=main -refspec= -path=/workspace/output/ -sslVerify=true -submodules=true -depth=1 -sparseCheckoutDirectories=
-[clone : clone] {"level":"error","ts":1782510279.156241,"caller":"git/git.go:53","msg":"Error running git [remote get-url origin]: exit status 2\nerror: No such remote 'origin'\n","stacktrace":"github.com/tektoncd-catalog/git-clone/git-init/git.run\n\tgithub.com/tektoncd-catalog/git-clone/git-init/git/git.go:53\ngithub.com/tektoncd-catalog/git-clone/git-init/git.Fetch\n\tgithub.com/tektoncd-catalog/git-clone/git-init/git/git.go:109\nmain.main\n\tgithub.com/tektoncd-catalog/git-clone/git-init/main.go:52\nruntime.main\n\truntime/proc.go:272"}
-[clone : clone] {"level":"info","ts":1782510292.786138,"caller":"git/git.go:186","msg":"Successfully cloned https://github.com/wang-roy/devops-capstone-project.git @ 0741bae20934ef36bfb807a1376ec8fb6f3d2254 (grafted, HEAD, origin/main) in path /workspace/output/"}
-[clone : clone] {"level":"info","ts":1782510293.4668446,"caller":"git/git.go:225","msg":"Successfully initialized and updated submodules in path /workspace/output/"}
-[clone : clone] + cd /workspace/output/
-[clone : clone] + git rev-parse HEAD
-[clone : clone] + RESULT_SHA=0741bae20934ef36bfb807a1376ec8fb6f3d2254
-[clone : clone] + EXIT_CODE=0
-[clone : clone] + [ 0 != 0 ]
-[clone : clone] + git log -1 --pretty=%ct
-[clone : clone] + RESULT_COMMITTER_DATE=1782498001
-[clone : clone] + printf %s 1782498001
-[clone : clone] + printf %s 0741bae20934ef36bfb807a1376ec8fb6f3d2254
-[clone : clone] + printf %s https://github.com/wang-roy/devops-capstone-project.git
-
-[lint : flake8] Collecting Werkzeug==2.1.2
-[lint : flake8]   Downloading Werkzeug-2.1.2-py3-none-any.whl (224 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.9/224.9 kB 3.0 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.9/224.9 kB 3.7 MB/s eta 0:00:00
 [lint : flake8] Collecting SQLAlchemy==1.4.46
 [lint : flake8]   Downloading SQLAlchemy-1.4.46-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.6 MB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 95.8 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 111.5 MB/s eta 0:00:00
 [lint : flake8] Collecting Flask==2.1.2
 [lint : flake8]   Downloading Flask-2.1.2-py3-none-any.whl (95 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.2/95.2 kB 31.9 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.2/95.2 kB 44.2 MB/s eta 0:00:00
 [lint : flake8] Collecting Flask-SQLAlchemy==2.5.1
 [lint : flake8]   Downloading Flask_SQLAlchemy-2.5.1-py2.py3-none-any.whl (17 kB)
 [lint : flake8] Collecting Flask-Talisman==1.1.0
@@ -125,137 +48,137 @@
 [lint : flake8]   Downloading flask_cors-6.0.5-py3-none-any.whl (16 kB)
 [lint : flake8] Collecting psycopg2-binary==2.9.3
 [lint : flake8]   Downloading psycopg2_binary-2.9.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 42.6 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 40.6 MB/s eta 0:00:00
 [lint : flake8] Collecting python-dotenv==0.20.0
 [lint : flake8]   Downloading python_dotenv-0.20.0-py3-none-any.whl (17 kB)
 [lint : flake8] Collecting gunicorn==20.1.0
 [lint : flake8]   Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 31.6 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 45.5 MB/s eta 0:00:00
 [lint : flake8] Collecting honcho==1.1.0
 [lint : flake8]   Downloading honcho-1.1.0-py2.py3-none-any.whl (21 kB)
 [lint : flake8] Collecting pylint==2.14.0
 [lint : flake8]   Downloading pylint-2.14.0-py3-none-any.whl (485 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 485.0/485.0 kB 9.3 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 485.0/485.0 kB 75.9 MB/s eta 0:00:00
 [lint : flake8] Collecting flake8==4.0.1
 [lint : flake8]   Downloading flake8-4.0.1-py2.py3-none-any.whl (64 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.1/64.1 kB 24.3 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.1/64.1 kB 30.8 MB/s eta 0:00:00
 [lint : flake8] Collecting black==22.3.0
 [lint : flake8]   Downloading black-22.3.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.5 MB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 102.6 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 144.9 MB/s eta 0:00:00
 [lint : flake8] Collecting nose==1.3.7
 [lint : flake8]   Downloading nose-1.3.7-py3-none-any.whl (154 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.7/154.7 kB 47.7 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.7/154.7 kB 8.0 MB/s eta 0:00:00
 [lint : flake8] Collecting pinocchio==0.4.3
 [lint : flake8]   Downloading pinocchio-0.4.3-py3-none-any.whl (12 kB)
 [lint : flake8] Collecting factory-boy==2.12.0
 [lint : flake8]   Downloading factory_boy-2.12.0-py2.py3-none-any.whl (36 kB)
 [lint : flake8] Collecting coverage==6.3.2
 [lint : flake8]   Downloading coverage-6.3.2-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (210 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.7/210.7 kB 44.1 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 210.7/210.7 kB 77.9 MB/s eta 0:00:00
 [lint : flake8] Collecting httpie==3.2.1
 [lint : flake8]   Downloading httpie-3.2.1-py3-none-any.whl (124 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.0/125.0 kB 53.8 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.0/125.0 kB 55.8 MB/s eta 0:00:00
 [lint : flake8] Collecting greenlet!=0.4.17
 [lint : flake8]   Downloading greenlet-3.2.5-cp39-cp39-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (587 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.5/587.5 kB 106.8 MB/s eta 0:00:00
-[lint : flake8] Collecting click>=8.0
-[lint : flake8]   Downloading click-8.1.8-py3-none-any.whl (98 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 47.3 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 587.5/587.5 kB 111.4 MB/s eta 0:00:00
 [lint : flake8] Collecting Jinja2>=3.0
 [lint : flake8]   Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 59.8 MB/s eta 0:00:00
-[lint : flake8] Collecting itsdangerous>=2.0
-[lint : flake8]   Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 56.9 MB/s eta 0:00:00
+[lint : flake8] Collecting click>=8.0
+[lint : flake8]   Downloading click-8.1.8-py3-none-any.whl (98 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.2/98.2 kB 44.1 MB/s eta 0:00:00
 [lint : flake8] Collecting importlib-metadata>=3.6.0
 [lint : flake8]   Downloading importlib_metadata-8.7.1-py3-none-any.whl (27 kB)
+[lint : flake8] Collecting itsdangerous>=2.0
+[lint : flake8]   Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
 [lint : flake8] Collecting typing_extensions>=4.6.0
 [lint : flake8]   Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 17.5 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 19.0 MB/s eta 0:00:00
 [lint : flake8] Requirement already satisfied: setuptools>=3.0 in /usr/local/lib/python3.9/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 14)) (58.1.0)
-[lint : flake8] Collecting tomlkit>=0.10.1
-[lint : flake8]   Downloading tomlkit-0.15.0-py3-none-any.whl (41 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.3/41.3 kB 14.0 MB/s eta 0:00:00
-[lint : flake8] Collecting tomli>=1.1.0
-[lint : flake8]   Downloading tomli-2.4.1-py3-none-any.whl (14 kB)
-[lint : flake8] Collecting dill>=0.2
-[lint : flake8]   Downloading dill-0.4.1-py3-none-any.whl (120 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 50.1 MB/s eta 0:00:00
-[lint : flake8] Collecting astroid<=2.12.0-dev0,>=2.11.5
-[lint : flake8]   Downloading astroid-2.11.7-py3-none-any.whl (251 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 251.2/251.2 kB 82.3 MB/s eta 0:00:00
 [lint : flake8] Collecting platformdirs>=2.2.0
 [lint : flake8]   Downloading platformdirs-4.4.0-py3-none-any.whl (18 kB)
 [lint : flake8] Collecting mccabe<0.8,>=0.6
 [lint : flake8]   Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
 [lint : flake8] Collecting isort<6,>=4.2.5
 [lint : flake8]   Downloading isort-5.13.2-py3-none-any.whl (92 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.3/92.3 kB 45.0 MB/s eta 0:00:00
-[lint : flake8] Collecting pyflakes<2.5.0,>=2.4.0
-[lint : flake8]   Downloading pyflakes-2.4.0-py2.py3-none-any.whl (69 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 37.7 MB/s eta 0:00:00
-[lint : flake8] Collecting mccabe<0.8,>=0.6
-[lint : flake8]   Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.3/92.3 kB 45.9 MB/s eta 0:00:00
+[lint : flake8] Collecting tomli>=1.1.0
+[lint : flake8]   Downloading tomli-2.4.1-py3-none-any.whl (14 kB)
+[lint : flake8] Collecting dill>=0.2
+[lint : flake8]   Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 66.5 MB/s eta 0:00:00
+[lint : flake8] Collecting astroid<=2.12.0-dev0,>=2.11.5
+[lint : flake8]   Downloading astroid-2.11.7-py3-none-any.whl (251 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 251.2/251.2 kB 83.9 MB/s eta 0:00:00
+[lint : flake8] Collecting tomlkit>=0.10.1
+[lint : flake8]   Downloading tomlkit-0.15.0-py3-none-any.whl (41 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.3/41.3 kB 21.4 MB/s eta 0:00:00
 [lint : flake8] Collecting pycodestyle<2.9.0,>=2.8.0
 [lint : flake8]   Downloading pycodestyle-2.8.0-py2.py3-none-any.whl (42 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.1/42.1 kB 22.7 MB/s eta 0:00:00
-[lint : flake8] Collecting pathspec>=0.9.0
-[lint : flake8]   Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 30.2 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.1/42.1 kB 23.0 MB/s eta 0:00:00
+[lint : flake8] Collecting mccabe<0.8,>=0.6
+[lint : flake8]   Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+[lint : flake8] Collecting pyflakes<2.5.0,>=2.4.0
+[lint : flake8]   Downloading pyflakes-2.4.0-py2.py3-none-any.whl (69 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.7/69.7 kB 38.2 MB/s eta 0:00:00
 [lint : flake8] Collecting mypy-extensions>=0.4.3
 [lint : flake8]   Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+[lint : flake8] Collecting pathspec>=0.9.0
+[lint : flake8]   Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 36.3 MB/s eta 0:00:00
 [lint : flake8] Collecting colorama
 [lint : flake8]   Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB)
 [lint : flake8] Collecting Faker>=0.7.0
 [lint : flake8]   Downloading faker-37.12.0-py3-none-any.whl (2.0 MB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 139.9 MB/s eta 0:00:00
-[lint : flake8] Collecting multidict>=4.7.0
-[lint : flake8]   Downloading multidict-6.7.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (240 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.3/240.3 kB 47.7 MB/s eta 0:00:00
-[lint : flake8] Collecting rich>=9.10.0
-[lint : flake8]   Downloading rich-15.0.0-py3-none-any.whl (310 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 78.7 MB/s eta 0:00:00
-[lint : flake8] Collecting requests-toolbelt>=0.9.1
-[lint : flake8]   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 23.7 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 129.7 MB/s eta 0:00:00
 [lint : flake8] Collecting Pygments>=2.5.2
 [lint : flake8]   Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 18.5 MB/s eta 0:00:00
-[lint : flake8] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (from httpie==3.2.1->-r requirements.txt (line 31)) (23.0.1)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 143.5 MB/s eta 0:00:00
 [lint : flake8] Collecting defusedxml>=0.6.0
 [lint : flake8]   Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
 [lint : flake8] Collecting charset-normalizer>=2.0.0
 [lint : flake8]   Downloading charset_normalizer-3.4.7-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (208 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.4/208.4 kB 78.0 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 208.4/208.4 kB 82.1 MB/s eta 0:00:00
 [lint : flake8] Collecting requests[socks]>=2.22.0
 [lint : flake8]   Downloading requests-2.32.5-py3-none-any.whl (64 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 35.9 MB/s eta 0:00:00
-[lint : flake8] Collecting wrapt<2,>=1.11
-[lint : flake8]   Downloading wrapt-1.17.3-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (81 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.7/81.7 kB 31.3 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 38.8 MB/s eta 0:00:00
+[lint : flake8] Collecting multidict>=4.7.0
+[lint : flake8]   Downloading multidict-6.7.1-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (240 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 240.3/240.3 kB 79.1 MB/s eta 0:00:00
+[lint : flake8] Collecting requests-toolbelt>=0.9.1
+[lint : flake8]   Downloading requests_toolbelt-1.0.0-py2.py3-none-any.whl (54 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 54.5/54.5 kB 28.1 MB/s eta 0:00:00
+[lint : flake8] Collecting rich>=9.10.0
+[lint : flake8]   Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.7/310.7 kB 101.6 MB/s eta 0:00:00
+[lint : flake8] Requirement already satisfied: pip in /usr/local/lib/python3.9/site-packages (from httpie==3.2.1->-r requirements.txt (line 31)) (23.0.1)
 [lint : flake8] Collecting lazy-object-proxy>=1.4.0
 [lint : flake8]   Downloading lazy_object_proxy-1.12.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (66 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.3/66.3 kB 27.9 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.3/66.3 kB 38.9 MB/s eta 0:00:00
+[lint : flake8] Collecting wrapt<2,>=1.11
+[lint : flake8]   Downloading wrapt-1.17.3-cp39-cp39-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (81 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 81.7/81.7 kB 48.3 MB/s eta 0:00:00
 [lint : flake8] Collecting tzdata
 [lint : flake8]   Downloading tzdata-2026.2-py2.py3-none-any.whl (349 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 349.3/349.3 kB 88.7 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 349.3/349.3 kB 114.8 MB/s eta 0:00:00
 [lint : flake8] Collecting zipp>=3.20
 [lint : flake8]   Downloading zipp-3.23.1-py3-none-any.whl (10 kB)
 [lint : flake8] Collecting MarkupSafe>=2.0
 [lint : flake8]   Downloading markupsafe-3.0.3-cp39-cp39-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
-[lint : flake8] Collecting idna<4,>=2.5
-[lint : flake8]   Downloading idna-3.18-py3-none-any.whl (65 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 34.0 MB/s eta 0:00:00
 [lint : flake8] Collecting certifi>=2017.4.17
 [lint : flake8]   Downloading certifi-2026.6.17-py3-none-any.whl (133 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 60.9 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.3/133.3 kB 69.8 MB/s eta 0:00:00
 [lint : flake8] Collecting urllib3<3,>=1.21.1
 [lint : flake8]   Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.6/131.6 kB 64.1 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.6/131.6 kB 67.5 MB/s eta 0:00:00
+[lint : flake8] Collecting idna<4,>=2.5
+[lint : flake8]   Downloading idna-3.18-py3-none-any.whl (65 kB)
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 37.3 MB/s eta 0:00:00
 [lint : flake8] Collecting PySocks!=1.5.7,>=1.5.6
 [lint : flake8]   Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
 [lint : flake8] Collecting markdown-it-py>=2.2.0
 [lint : flake8]   Downloading markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
-[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 46.6 MB/s eta 0:00:00
+[lint : flake8]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 87.5/87.5 kB 42.7 MB/s eta 0:00:00
 [lint : flake8] Collecting mdurl~=0.1
 [lint : flake8]   Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
 [lint : flake8] Installing collected packages: nose, mccabe, honcho, Flask-Talisman, zipp, wrapt, Werkzeug, urllib3, tzdata, typing_extensions, tomlkit, tomli, python-dotenv, PySocks, Pygments, pyflakes, pycodestyle, psycopg2-binary, platformdirs, pathspec, mypy-extensions, mdurl, MarkupSafe, lazy-object-proxy, itsdangerous, isort, idna, gunicorn, greenlet, dill, defusedxml, coverage, colorama, click, charset-normalizer, certifi, SQLAlchemy, requests, pinocchio, multidict, markdown-it-py, Jinja2, importlib-metadata, flake8, Faker, black, astroid, rich, requests-toolbelt, pylint, Flask, factory-boy, httpie, Flask-SQLAlchemy, Flask-Cors
@@ -264,11 +187,5 @@
 [lint : flake8] 
 [lint : flake8] [notice] A new release of pip is available: 23.0.1 -> 26.0.1
 [lint : flake8] [notice] To update, run: pip install --upgrade pip
-[lint : flake8] ./tests/test_routes.py:173:47: W291 trailing whitespace
-[lint : flake8] ./tests/test_routes.py:206:1: W293 blank line contains whitespace
-[lint : flake8] ./tests/test_routes.py:223:1: W293 blank line contains whitespace
-[lint : flake8] ./tests/test_routes.py:230:1: W293 blank line contains whitespace
-[lint : flake8] 1     W291 trailing whitespace
-[lint : flake8] 3     W293 blank line contains whitespace
-[lint : flake8] 4
+[lint : flake8] 0
 
