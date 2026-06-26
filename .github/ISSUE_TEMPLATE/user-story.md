@@ -1,3 +1,10 @@
+---
+name: User Story
+about: This is a template for creating user stories
+title: 'User Story: [Feature Name]'
+labels: 'enhancement'
+---
+
 **As a** [role]  
 **I need** [function]  
 **So that** [benefit]  
