@@ -129,6 +129,7 @@ class TestAccountService(TestCase):
                          status.HTTP_415_UNSUPPORTED_MEDIA_TYPE)
 
     # ADD YOUR TEST CASES HERE ...
+
     def test_list_accounts(self):
         """It should Get a list of Accounts"""
         self._create_accounts(5)
