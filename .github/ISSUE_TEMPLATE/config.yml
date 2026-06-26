@@ -1,8 +1,5 @@
 blank_issues_enabled: false
-contact_links:
-  - name: GitHub Community Support
-    url: https://github.com/orgs/community/discussions
-    about: Please ask and answer questions here.
-  - name: GitHub Security Bug Bounty
-    url: https://bounty.github.com/
-    about: Please report security vulnerabilities here.
+template1: 
+  - name: User Story
+    url: https://github.com/wang-roy/devops-capstone-project/blob/main/.github/ISSUE_TEMPLATE/user-story.md
+    about: This is a template for creating user stories
